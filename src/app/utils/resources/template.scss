@@ -1,0 +1,39 @@
+// Theming variables
+$primary: #037CEC;
+$primary-100: #74bcff;
+$dark: #29292D;
+$background: #F4F9FE;
+$md-shade: #F2F4F6;
+$dark-shade: #E7EBED;
+$gray: #B4BDC8;
+$dark-green: #0D4744;
+$light-green: #00CC66;
+$yellow: #FFCF00;
+$red: #FF082C;
+$orange: #FF5722;
+$white: #ffffff;
+
+
+@mixin transition($property, $duration, $timing-function) {
+	-webkit-transition: $property $duration $timing-function;
+    -moz-transition: $property $duration $timing-function;
+    -o-transition: $property $duration $timing-function;
+    transition: $property $duration $timing-function;
+}
+
+@mixin transform($transform) {
+    -webkit-transform: $transform;
+    -moz-transform: $transform;
+    -ms-transform: $transform;
+    -o-transform: $transform;
+    transform: $transform;
+}
+
+
+@mixin flex($direction: row, $justify: center, $align: center) {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}

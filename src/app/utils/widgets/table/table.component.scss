@@ -1,0 +1,56 @@
+@import './../../resources/template.scss';
+
+.common-table{
+    thead{
+        margin-bottom: 20px;
+    }
+    th{
+        padding-left: 20px;
+        font-weight: 400;
+        &:first-child{
+            text-align: left;
+            border-top-left-radius: 6px;
+            border-bottom-left-radius: 6px;
+        }
+        &:last-child{
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 6px;
+            span{
+                display: none;
+            }
+        }
+    }
+    td{
+        padding-left: 20px;
+        text-align: center;
+        border-top: 1px solid $md-shade;
+        border-bottom: 1px solid $md-shade;
+        &:first-child{
+            text-align: left;
+            border-top-left-radius: 6px;
+            border-bottom-left-radius: 6px;
+            border-left: 1px solid $md-shade;
+            @include flex(row, flex-start, center);
+            ::ng-deep{
+                img{
+                    width: auto;
+                    height: auto;
+                    max-height: 30px;
+                    margin-right: 10px;
+                    &.handyman{
+                        filter: drop-shadow(1000px 0 0 $primary);
+                        transform: translateX(-1000px);
+                    }
+                }
+            }
+        }
+        &:last-child{
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 6px;
+            border-right: 1px solid $md-shade;
+            span{
+                display: none;
+            }
+        }
+    }
+}
