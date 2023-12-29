@@ -1,1 +1,20 @@
-<p>login works!</p>
+<section class="login-main-con">
+    <img class="main-background" src="./../../../assets/images/login_background.png" alt="Login Sides">
+    <div class="main-content">
+        <div class="content-con">
+            <h2 class="main-heading">LOGIN</h2>
+            <app-textfield
+            [type]="'email'"
+            [placeholder]="'Email'"
+            ></app-textfield>
+            <app-textfield
+            [type]="'password'"
+            [placeholder]="'Password'"
+            ></app-textfield>
+            <div>
+                <a [routerLink]="['/auth/forgot']">Forgot Password</a>
+            </div>
+            <button class="primary-button">LOGIN</button>
+        </div>
+    </div>
+</section>
