@@ -12,7 +12,7 @@ import { AttendanceConModel } from 'src/app/domain/interfaces/attendance_con_mod
 export class AttendanceContainerComponent {
   @Input() item: AttendanceConModel = {
     title: "",
-    color: "",
+    color: "./../../../../assets/icons/present.svg",
     icon: "",
     subTitle: "",
     action: ""
