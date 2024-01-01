@@ -12,42 +12,42 @@ export class SidebarComponent {
 
   sidebarItems: SidebarItem[] = [
     {
-      icon: "./../../../assets/icons/dashboard.svg",
+      icon: "./../../../assets/icons/dashboard.png",
       label: "Dashboard",
       route: "dashboard",
     },
     {
-      icon: "./../../../assets/icons/vendor.svg",
+      icon: "./../../../assets/icons/employess.png",
       label: "Employees",
       route: "employees"
     },
     {
-      icon: "./../../../assets/icons/handyman.svg",
+      icon: "./../../../assets/icons/pay_roll.png",
       label: "Payroll",
       route: "payroll"
     },
     {
-      icon: "./../../../assets/icons/users.svg",
+      icon: "./../../../assets/icons/attendance.png",
       label: "Attendance",
       route: "attendance"
     },
     {
-      icon: "./../../../assets/icons/appointments.svg",
+      icon: "./../../../assets/icons/leaves.png",
       label: "Leaves",
       route: "leaves",
     },
     {
-      icon: "./../../../assets/icons/vendor_request.svg",
+      icon: "./../../../assets/icons/tickets.png",
       label: "Tickets",
       route: "tickets"
     },
     {
-      icon: "./../../../assets/icons/add_vehicle.svg",
+      icon: "./../../../assets/icons/performance.png",
       label: "Performance",
       route: "performance"
     },
     {
-      icon: "./../../../assets/icons/marketing.svg",
+      icon: "./../../../assets/icons/policy.png",
       label: "Policies",
       route: "policies"
     }

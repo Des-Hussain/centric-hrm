@@ -16,6 +16,8 @@ $white: #ffffff;
 $blue: #429FFD;
 
 
+
+
 @mixin transition($property, $duration, $timing-function) {
 	-webkit-transition: $property $duration $timing-function;
     -moz-transition: $property $duration $timing-function;

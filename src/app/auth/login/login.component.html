@@ -1,8 +1,12 @@
 <section class="login-main-con">
-    <img class="main-background" src="./../../../assets/images/login_background.png" alt="Login Sides">
+    <img class="main-background" src="./../../../assets/img/login_background.png" alt="Login Sides">
     <div class="main-content">
+        <div  class="logo-con">
+            <img class="logo" src="./../../../assets/img/hrm_logo.png" alt="Logo">
+        </div>
         <div class="content-con">
-            <h2 class="main-heading">LOGIN</h2>
+            <h2 class="main-heading font-bold justify-center left-36"  >LOGIN</h2>
+            <h2 class="flex justify-center mt-4"  >Sign in and start managing your candidates!</h2>
             <app-textfield
             [type]="'email'"
             [placeholder]="'Email'"
@@ -10,6 +14,7 @@
             <app-textfield
             [type]="'password'"
             [placeholder]="'Password'"
+
             ></app-textfield>
             <div>
                 <a [routerLink]="['/auth/forgot']">Forgot Password</a>

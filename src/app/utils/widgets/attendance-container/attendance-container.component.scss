@@ -1,0 +1,18 @@
+.attendance-container{
+    height:60px 
+    ;
+    width: 232px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    .attendance-text{
+        font-size: 14px;
+        font-weight: 500;
+        color: #000000;
+    }
+}

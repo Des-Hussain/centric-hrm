@@ -9,21 +9,29 @@ import { PayrollComponent } from './payroll/payroll.component';
 import { AttendanceComponent } from './attendance/attendance.component';
 import { LeavesComponent } from './leaves/leaves.component';
 import { ComponentsModule } from '../components/components.module';
+import { TicketsComponent } from './tickets/tickets.component';
+import { PerformanceComponent } from './performance/performance.component';
+import { PoliciesComponent } from './policies/policies.component';
+import { AttendanceContainerComponent } from "../utils/widgets/attendance-container/attendance-container.component";
 
 
 @NgModule({
-  declarations: [
-    PagesComponent,
-    DashboardComponent,
-    EmployeesComponent,
-    PayrollComponent,
-    AttendanceComponent,
-    LeavesComponent
-  ],
-  imports: [
-    CommonModule,
-    PagesRoutingModule,
-    ComponentsModule
-  ]
+    declarations: [
+        PagesComponent,
+        DashboardComponent,
+        EmployeesComponent,
+        PayrollComponent,
+        AttendanceComponent,
+        LeavesComponent,
+        TicketsComponent,
+        PerformanceComponent,
+        PoliciesComponent
+    ],
+    imports: [
+        CommonModule,
+        PagesRoutingModule,
+        ComponentsModule,
+        AttendanceContainerComponent
+    ]
 })
 export class PagesModule { }
