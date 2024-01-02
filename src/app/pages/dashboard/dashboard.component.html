@@ -1,6 +1,66 @@
-<section class="h-1/6 border-l-amber-400 main-con" >
-    <div class="inner-con"></div>
-    <app-attendance-container> 
+<section class="main-con flex flex-row text-black">
+  <div class="flex flex-col">
+    <h2 class="title-text">Dashboard</h2>
+  <div class="flex flex-row">
+    <div class="flex flex-col max-h-96 white bg-white rounded-md pl-4">
+      <img class="max-h-56" src="assets/img/dashboard_img.png" alt="dashboard_img">
+      <h2 class="card-text">Muhammad Hussain</h2>
+      <h2 class=" mb-2">Welcome back, you have 16 notifications</h2>
+      <div class="text-white w-28 text-center rounded-md  h-7" style="background-color: #00D4E7;">Learn More</div>
+      <h2 class="h-4"></h2>
+    </div>
+    <div class="flex flex-col">
+      <div class="flex flex-row ">
+        <div *ngFor="let item of attendanceContainer">
+          <app-attendance-container [item]="item">
 
-    </app-attendance-container>
+          </app-attendance-container>
+        </div>
+      </div>
+      <div class="bg-white ml-5 rounded-md" id="kpiCharts" style="width: 735px;height:300px;"></div>
+    </div>
+  </div>
+  <div class="bg-white mt-4" style="width: 700px;height:600px;">
+    <h1 class=" text-3xl p-4 font-bold">Notice Board</h1>
+    <div style="width: 650px; background-color: #3137420d;" class="justify-center ml-4 rounded-md">
+      <h2 class=" p-4">
+        <strong>Eid-ul-Fitr Holiday!</strong>
+        <br>
+        Dear employees,
+        <br>
+        Please be informed that the office will remain closed on the occasion of Eid-ul-Fitr.
+        We wish you all a happy and blessed Eid with your loved ones. We hope that you enjoy your time with your
+        family and friends, and come back refreshed on the following day.
+        <br>
+        <br>
+        Best regards,
+        <br>
+        <strong>HR Department</strong>
+        <br>
+        December 12th, 2023 - 01:20 PM
+      </h2>
+    </div>
+  </div>
+</div>
+<div class="flex flex-col">
+  <h2 style="height: 75px;"></h2>
+  <div class="bg-white p-2 ml-6 rounded-lg" style="height: 514px;width: 445px;border-right: 6px solid #00D4E7;">
+    <div class="flex flex-row justify-between pt-1">
+      <h2 class="font-bold text-2xl">Tickets Request</h2>
+      <button  class="rounded-md text-white h-6 w-24 flex flex-row justify-between content-center pr-1 pl-1" style="background-color: #00D4E7;"> Dates
+        <img class="mt-2" src="./../../../assets/icons/arrow_down.svg" alt="arrow_down">
+      </button>
+    </div>
+    <div class="header-action-button  flex flex-row ">
+     
+
+      <div class="avatar-con  relative overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
+          <img class="absolute w-full h-full text-gray-400" src="./../../../assets/img/portrait.jpg" alt="Portrait">
+        </div>
+        <span class=" p-4">Ghazan Aqeel</span>
+          
+  </div>
+  </div>
+<div></div>
+</div>
 </section>

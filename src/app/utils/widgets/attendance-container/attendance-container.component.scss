@@ -1,5 +1,5 @@
 .attendance-container{
-    height:60px 
+    height:70px 
     ;
     width: 232px;
     background: #FFFFFF;
@@ -7,12 +7,18 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 10px;
+    justify-content: safe;
+    padding: 0 10px ;
+    
     margin-bottom: 10px;
-    .attendance-text{
-        font-size: 14px;
-        font-weight: 500;
-        color: #000000;
+    margin-left: 20px;
+    .after-mimic {
+        left: 0px;
+        top: 0px;
+        width: 8px;
+        height: 100%;
+        position: absolute;
+        border-radius: 8px 0px 0px 8px;
     }
+   
 }

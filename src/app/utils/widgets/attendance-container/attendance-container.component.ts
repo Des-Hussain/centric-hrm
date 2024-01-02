@@ -10,12 +10,6 @@ import { AttendanceConModel } from 'src/app/domain/interfaces/attendance_con_mod
   styleUrls: ['./attendance-container.component.scss']
 })
 export class AttendanceContainerComponent {
-  @Input() item: AttendanceConModel = {
-    title: "",
-    color: "./../../../../assets/icons/present.svg",
-    icon: "",
-    subTitle: "",
-    action: ""
-  };
+  @Input() item?: AttendanceConModel;
   
 }
