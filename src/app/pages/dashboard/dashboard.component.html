@@ -1,66 +1,125 @@
 <section class="main-con flex flex-row text-black">
   <div class="flex flex-col">
     <h2 class="title-text">Dashboard</h2>
-  <div class="flex flex-row">
-    <div class="flex flex-col max-h-96 white bg-white rounded-md pl-4">
-      <img class="max-h-56" src="assets/img/dashboard_img.png" alt="dashboard_img">
-      <h2 class="card-text">Muhammad Hussain</h2>
-      <h2 class=" mb-2">Welcome back, you have 16 notifications</h2>
-      <div class="text-white w-28 text-center rounded-md  h-7" style="background-color: #00D4E7;">Learn More</div>
-      <h2 class="h-4"></h2>
-    </div>
-    <div class="flex flex-col">
-      <div class="flex flex-row ">
-        <div *ngFor="let item of attendanceContainer">
-          <app-attendance-container [item]="item">
-
-          </app-attendance-container>
-        </div>
+    <div class="flex flex-row">
+      <div class="flex flex-col max-h-96 white bg-white rounded-md pl-4">
+        <img class="max-h-56" src="assets/img/dashboard_img.png" alt="dashboard_img">
+        <h2 class="card-text">Muhammad Hussain</h2>
+        <h2 class=" mb-2">Welcome back, you have 16 notifications</h2>
+        <div class="text-white w-28 text-center rounded-md  h-7" style="background-color: #00D4E7;">Learn More</div>
+        <h2 class="h-4"></h2>
       </div>
-      <div class="bg-white ml-5 rounded-md" id="kpiCharts" style="width: 735px;height:300px;"></div>
-    </div>
-  </div>
-  <div class="bg-white mt-4" style="width: 700px;height:600px;">
-    <h1 class=" text-3xl p-4 font-bold">Notice Board</h1>
-    <div style="width: 650px; background-color: #3137420d;" class="justify-center ml-4 rounded-md">
-      <h2 class=" p-4">
-        <strong>Eid-ul-Fitr Holiday!</strong>
-        <br>
-        Dear employees,
-        <br>
-        Please be informed that the office will remain closed on the occasion of Eid-ul-Fitr.
-        We wish you all a happy and blessed Eid with your loved ones. We hope that you enjoy your time with your
-        family and friends, and come back refreshed on the following day.
-        <br>
-        <br>
-        Best regards,
-        <br>
-        <strong>HR Department</strong>
-        <br>
-        December 12th, 2023 - 01:20 PM
-      </h2>
-    </div>
-  </div>
-</div>
-<div class="flex flex-col">
-  <h2 style="height: 75px;"></h2>
-  <div class="bg-white p-2 ml-6 rounded-lg" style="height: 514px;width: 445px;border-right: 6px solid #00D4E7;">
-    <div class="flex flex-row justify-between pt-1">
-      <h2 class="font-bold text-2xl">Tickets Request</h2>
-      <button  class="rounded-md text-white h-6 w-24 flex flex-row justify-between content-center pr-1 pl-1" style="background-color: #00D4E7;"> Dates
-        <img class="mt-2" src="./../../../assets/icons/arrow_down.svg" alt="arrow_down">
-      </button>
-    </div>
-    <div class="header-action-button  flex flex-row ">
-     
+      <div class="flex flex-col">
+        <div class="flex flex-row ">
+          <div *ngFor="let item of attendanceContainer">
+            <app-attendance-container [item]="item">
 
-      <div class="avatar-con  relative overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
-          <img class="absolute w-full h-full text-gray-400" src="./../../../assets/img/portrait.jpg" alt="Portrait">
+            </app-attendance-container>
+          </div>
         </div>
-        <span class=" p-4">Ghazan Aqeel</span>
-          
+        <div class="bg-white ml-5 rounded-md" id="kpiCharts" style="width: 735px;height:300px;"></div>
+      </div>
+    </div>
+    <div class="bg-white mt-4" style="width: 700px;height:600px;">
+      <h1 class=" text-3xl p-4 font-bold">Notice Board</h1>
+      <div style="width: 650px; background-color: #3137420d;" class="justify-center ml-4 rounded-md">
+        <p class=" p-4">
+          <strong>Eid-ul-Fitr Holiday!</strong>
+          <br>
+          Dear employees,
+          <br>
+          Please be informed that the office will remain closed on the occasion of Eid-ul-Fitr.
+          We wish you all a happy and blessed Eid with your loved ones. We hope that you enjoy your time with your
+          family and friends, and come back refreshed on the following day.
+          <br>
+          <br>
+          Best regards,
+          <br>
+          <strong>HR Department</strong>
+          <br>
+          December 12th, 2023 - 01:20 PM
+        </p>
+      </div>
+    </div>
   </div>
+  <div class=" block">
+    <h2 style="height: 75px;"></h2>
+    <div class="bg-white p-2 ml-6 rounded-lg block" style="width: 445px;border-right: 6px solid #00D4E7;">
+      <div class="flex flex-row justify-between p-3">
+        <h2 class="font-bold text-2xl">Tickets Request</h2>
+        <button class="rounded-md text-white flex flex-row  p-1.5" style="background-color: #00D4E7;">
+          <div>Dates</div>
+          <div style="width: 33px;"></div>
+          <img class="mt-2" src="./../../../assets/icons/arrow_down.svg" alt="arrow_down">
+        </button>
+      </div>
+      <ul role="list" class="divide-gray-200 dark:divide-gray-700">
+        <li class="py-3 sm:py-4 px-2" *ngFor="let i of [].constructor(6)">
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <img class="w-12 h-12 rounded-full" src="./../../../assets/img/portrait.jpg" alt="Neil image">
+            </div>
+            <div class="flex-1 min-w-0 ms-4">
+              <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                Neil Sims
+              </p>
+              <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                PHP Developer
+              </p>
+            </div>
+            <div class="inline-flex items-center text-base  text-gray dark:text-white">
+              2nd to 12th
+
+            </div>
+          </div>
+        </li>
+      </ul>
+      <button  class=" flex flex-row  p-1.5"> 
+        <div style="width: 320px;"></div>
+        <div>View all</div>
+        <div style="width: 15px;"></div>
+         <img class="mt-2" src="./../../../assets/icons/chevron_right.svg" alt="arrow_right">
+       </button>
+      
+    </div>
+    <div style="height: 20px;"></div>
+    <div class="bg-white p-2 ml-6 rounded-lg" style="width: 445px;border-right: 6px solid #9BA5B7;">
+      <div class="flex flex-row justify-between p-3">
+        <h2 class="font-bold text-2xl">Events</h2>
+        <button class="rounded-md text-white flex flex-row  p-1.5" style="background-color: #00D4E7;">
+          <div>Dates</div>
+          <div style="width: 33px;"></div>
+          <img class="mt-2" src="./../../../assets/icons/arrow_down.svg" alt="arrow_down">
+        </button>
+      </div>
+      <ul role="list" class="divide-gray-200 dark:divide-gray-700">
+        <li class="py-3 sm:py-4 px-2" *ngFor="let i of [].constructor(3)">
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <img class="w-12 h-12 rounded-full" src="./../../../assets/img/portrait.jpg" alt="Neil image">
+            </div>
+            <div class="flex-1 min-w-0 ms-4">
+              <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                Neil Sims
+              </p>
+              <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                PHP Developer
+              </p>
+            </div>
+            <div class="inline-flex items-center text-base  text-gray dark:text-white">
+              2nd to 12th
+
+            </div>
+          </div>
+        </li>
+      </ul>
+      <button  class=" flex flex-row  p-1.5"> 
+        <div style="width: 320px;"></div>
+        <div>View all</div>
+        <div style="width: 15px;"></div>
+         <img class="mt-2" src="./../../../assets/icons/chevron_right.svg" alt="arrow_right">
+       </button>
+    </div>
+   
   </div>
-<div></div>
-</div>
 </section>
