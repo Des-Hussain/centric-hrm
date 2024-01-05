@@ -12,19 +12,26 @@ export class EmployeesComponent {
    name: string = "Abdul Moiz";
    mail: string = "ali.naqi@centrictech.com";
 
-   data:  EmployeeDataModel = {
-      name: "Abdul Moiz",
-      mail: "ali.naqi@centrictech.com",
-      department: "App Department",
+   data?:  EmployeeDataModel;
+  //   = {
+  //     name: "Abdul Moiz",
+  //     mail: "ali.naqi@centrictech.com",
+  //     department: "App Department",
       
-      id:"#09834",
-      phone: "+92 334 3241741",
-      picture: "./../../../assets/img/portrait.jpg",
-      active: false,
-      isSelected: false,
-      designation: "Social Media Marketing Executive"
+  //     id:"#09834",
+  //     phone: "+92 334 3241741",
+  //     picture: "./../../../assets/img/portrait.jpg",
+  //     active: false,
+  //     isSelected: false,
+  //     designation: "Social Media Marketing Executive"
 
-   };
+  //  };
+   showSideBar: boolean = false;
+
+   onTap(value: EmployeeDataModel){
+    this.data = value;
+    this.showSideBar = true;
+  }
 
    employeeList: EmployeeDataModel[] = [
     {
