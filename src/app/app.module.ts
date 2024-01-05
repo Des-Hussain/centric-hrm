@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AttendanceContainerComponent } from './utils/widgets/attendance-container/attendance-container.component';
 
 @NgModule({
   declarations: [
@@ -12,7 +11,6 @@ import { AttendanceContainerComponent } from './utils/widgets/attendance-contain
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AttendanceContainerComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,63 @@
+@import './../../../../app/utils/resources/template.scss';
+
+.side-section{
+    width: 315px;
+    height: auto;
+    max-height: 100%;
+    overflow: scroll;
+    @include transition(all, 0.3s, ease-in-out);
+    @include transform(translateX(100%));
+    &.open{
+        @include transform(translateX(0));
+    }
+
+    ::ng-deep{
+        .certificate-img-con{
+            height: 100px;
+            background-color: $primary;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            border-radius: 8px;
+            max-width: 50%;
+            position: relative;
+            cursor: pointer;
+            .backdrop{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0,0,0,0.5);
+                opacity: 0;
+                @include transition(all, 0.3s, ease-in-out);
+            }
+            &:hover{
+                .backdrop{
+                    opacity: 1;
+                }
+            }
+            &:not(:last-child){
+                margin-right: 10px;
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        
+        .check-row-con{
+            display: flex;
+            display: -webkit-flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-bottom: 10px;
+            gap: 10px;
+            img{
+                width: 15px;
+                height: 15px;
+                object-fit: contain;
+            }
+        }
+    }
+}

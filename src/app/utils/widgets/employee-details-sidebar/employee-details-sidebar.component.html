@@ -1,0 +1,8 @@
+<section class="side-section bg-white mt-1 min-h-full absolute right-0 top-0" [ngClass]="{'open': showSideBar}">
+    <div class="closeCon px-5 py-4 flex">
+        <span (click)="closeRightSideBar()" class="cursor-pointer">
+            <img class="w-4" src="./../../../assets/icons/close.svg" alt="Times">
+        </span>
+    </div>
+    <ng-content></ng-content>
+</section>
