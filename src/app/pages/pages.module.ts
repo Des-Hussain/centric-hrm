@@ -13,6 +13,7 @@ import { TicketsComponent } from './tickets/tickets.component';
 import { PerformanceComponent } from './performance/performance.component';
 import { PoliciesComponent } from './policies/policies.component';
 import { AttendanceContainerComponent } from "../utils/widgets/attendance-container/attendance-container.component";
+import { EmployeeCardComponent } from './employees/employee-card/employee-card.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { AttendanceContainerComponent } from "../utils/widgets/attendance-contai
         LeavesComponent,
         TicketsComponent,
         PerformanceComponent,
-        PoliciesComponent
+        PoliciesComponent,
+        EmployeeCardComponent,
     ],
     imports: [
         CommonModule,

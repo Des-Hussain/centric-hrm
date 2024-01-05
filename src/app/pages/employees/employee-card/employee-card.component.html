@@ -1,0 +1,43 @@
+<div class="flex flex-col w-80 bg-white rounded-lg p-2.5 ">
+    <div class=" flex flex-row justify-between">
+    <div class="h-6 w-6  rounded-md" [ngClass]="data.isSelected ? 'background-primary' : 'background-gray'"> </div>
+    <div class="flex flex-row space-x-3">
+        <img [src]="data.active ? './../../../assets/icons/active_img.svg' : './../../../assets/icons/not_active.svg'" 
+        [alt]="data.active ? 'active' : 'inactive'">
+            <!-- <button class="p-0 m-0">
+
+    </button> -->
+        <img  src="./../../../assets/icons/edit_horizontal.svg" alt="edit_horizontal">
+    </div>    
+    </div>
+<img class="rounded-full h-32 w-32  m-3 self-center" [src]="data.picture" alt="user_pic">
+    <h2 class="text-center text-2xl font-bold dark-color">{{data.name}}</h2>
+    <h4 class="text-center gray-text text-sm mb-5">{{data.designation}}</h4>
+
+    <div class="flex flex-col p-2.5 h-36 rounded-md">
+        <div class="flex flex-row  justify-between">
+            <h4 class="text-sm gray-text" >Department</h4>
+            <h4 class="text-sm gray-text">Employee ID</h4>
+        </div>
+        <div class="flex flex-row font-bold justify-between"style="color: black; opacity: 100%; ">
+            <h4 class="text-sm " >{{data.department}}</h4>
+            <h4 class="text-sm">{{data.id}}</h4>
+        </div>
+        <div class=" my-3" style="height: 1px; background-color: #9BA5B7; opacity: 50%;"></div>
+        <div class=" flex flex-row mb-2 ">
+            <img  src="./../../../assets/icons/mail.svg" alt="mail">
+          <h1 class="darl-color font-semibold ml-3">
+
+            {{data.mail}} 
+        </h1>
+        </div>
+        <div class=" flex flex-row ">
+            <img  src="./../../../assets/icons/phone.svg" alt="phone">
+          <h1 class="darl-color font-semibold ml-3">
+
+            {{data.phone}} 
+        </h1>
+        </div>
+
+    </div>
+</div>
