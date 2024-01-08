@@ -5,17 +5,11 @@ export class AppRoutes{
     static readonly otp = 'otp';
     static readonly changePassword = 'changePassword';
     static readonly dashboard = 'dashboard';
-    static readonly vendors = 'vendors';
-    static readonly handyman = 'handyman';
-    static readonly users = 'users';
-    static readonly appointments = 'appointments';
-    static readonly vendorApplications = 'vendorApplications';
-    static readonly vehicles = 'vehicles';
-    static readonly marketing = 'marketing';
-    static readonly analytics = 'analytics';
-    static readonly eStore = 'eStore';
-    static readonly loyaltyAndReviews = 'loyaltyAndReviews';
-    static readonly support = 'support';
-    static readonly automotiveServices = 'automotiveServices';
-    static readonly homeimprovementServices = 'homeImprovementServices';
+    static readonly employees = 'employees';
+    static readonly payroll = 'payroll';
+    static readonly attendance = 'attendance';
+    static readonly leaves = 'leaves';
+    static readonly tickets = 'tickets';
+    static readonly performance = 'performance';
+    static readonly policies = 'policies';
 }

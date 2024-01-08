@@ -29,6 +29,12 @@ dependencies:
   '@angular/router':
     specifier: ^16.2.0
     version: 16.2.12(@angular/common@16.2.12)(@angular/core@16.2.12)(@angular/platform-browser@16.2.12)(rxjs@7.8.1)
+  echarts:
+    specifier: ^5.4.3
+    version: 5.4.3
+  ngx-echarts:
+    specifier: ^17.1.0
+    version: 17.1.0(echarts@5.4.3)
   rxjs:
     specifier: ~7.8.0
     version: 7.8.1
@@ -49,6 +55,9 @@ devDependencies:
   '@angular/compiler-cli':
     specifier: ^16.2.0
     version: 16.2.12(@angular/compiler@16.2.12)(typescript@5.1.6)
+  '@tailwindcss/forms':
+    specifier: ^0.5.7
+    version: 0.5.7(tailwindcss@3.3.6)
   '@types/jasmine':
     specifier: ~4.3.0
     version: 4.3.6
@@ -2174,6 +2183,15 @@ packages:
     resolution: {integrity: sha512-+9jVqKhRSpsc591z5vX+X5Yyw+he/HCB4iQ/RYxw35CEPaY1gnsNE43nf9n9AaYjAQrTiI/mOwKUKdUs9vf7Xg==}
     dev: true
 
+  /@tailwindcss/forms@0.5.7(tailwindcss@3.3.6):
+    resolution: {integrity: sha512-QE7X69iQI+ZXwldE+rzasvbJiyV/ju1FGHH0Qn2W3FKbuYtqp8LKcy6iSw79fVUT5/Vvf+0XgLCeYVG+UV6hOw==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1'
+    dependencies:
+      mini-svg-data-uri: 1.4.4
+      tailwindcss: 3.3.6
+    dev: true
+
   /@tootallnate/once@1.1.2:
     resolution: {integrity: sha512-RbzJvlNzmRq5c3O09UipeuXno4tA1FE6ikOjxZK0tuxVv3412l64l5t1W5pj4+rJq9vpkm/kwiR07aZXnsKPxw==}
     engines: {node: '>= 6'}
@@ -3569,6 +3587,13 @@ packages:
   /eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
     dev: true
+
+  /echarts@5.4.3:
+    resolution: {integrity: sha512-mYKxLxhzy6zyTi/FaEbJMOZU1ULGEQHaeIeuMR5L+JnJTpz+YR03mnnpBhbR4+UYJAgiXgpyTVLffPAjOTLkZA==}
+    dependencies:
+      tslib: 2.3.0
+      zrender: 5.4.4
+    dev: false
 
   /ee-first@1.1.1:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
@@ -5209,6 +5234,11 @@ packages:
       webpack: 5.88.2(esbuild@0.18.17)
     dev: true
 
+  /mini-svg-data-uri@1.4.4:
+    resolution: {integrity: sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==}
+    hasBin: true
+    dev: true
+
   /minimalistic-assert@1.0.1:
     resolution: {integrity: sha512-UtJcAD4yEaGtjPezWuO9wC4nwUnVH/8/Im3yEHQP4b67cXlD/Qr9hdITCU1xDbSEXg2XKNaP8jsReV7vQd00/A==}
     dev: true
@@ -5397,6 +5427,15 @@ packages:
   /neo-async@2.6.2:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
     dev: true
+
+  /ngx-echarts@17.1.0(echarts@5.4.3):
+    resolution: {integrity: sha512-DSNF/aKmJSxJWb9UwPUgNtY8Ma9SmViDBRacvAwpakc/5mJerunxndDgoBQkYk5JFKAjXX6bp4ZWLRKL3/5AGA==}
+    peerDependencies:
+      echarts: '>=5.0.0'
+    dependencies:
+      echarts: 5.4.3
+      tslib: 2.6.2
+    dev: false
 
   /nice-napi@1.0.2:
     resolution: {integrity: sha512-px/KnJAJZf5RuBGcfD+Sp2pAKq0ytz8j+1NehvgIGFkvtvFrDM3T8E4x/JJODXK9WZow8RRGrbA9QQ3hs+pDhA==}
@@ -7016,6 +7055,10 @@ packages:
     resolution: {integrity: sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==}
     dev: true
 
+  /tslib@2.3.0:
+    resolution: {integrity: sha512-N82ooyxVNm6h1riLCoyS9e3fuJ3AMG2zIZs2Gd1ATcSFjSA23Q0fzjjZeh0jbJvWVDZ0cJT8yaNNaaXHzueNjg==}
+    dev: false
+
   /tslib@2.6.1:
     resolution: {integrity: sha512-t0hLfiEKfMUoqhG+U1oid7Pva4bbDPHYfJNiB7BiIjRkj1pyC++4N3huJfqY6aRH6VTB0rvtzQwjM4K6qpfOig==}
     dev: true
@@ -7622,3 +7665,9 @@ packages:
     resolution: {integrity: sha512-MKPbmZie6fASC/ps4dkmIhaT5eonHkEt6eAy80K42tAm0G2W+AahLJjbfi6X9NPdciOE9GRFTTM8u2IiF6O3ww==}
     dependencies:
       tslib: 2.6.2
+
+  /zrender@5.4.4:
+    resolution: {integrity: sha512-0VxCNJ7AGOMCWeHVyTrGzUgrK4asT4ml9PEkeGirAkKNYXYzoPJCLvmyfdoOXcjTHPs10OZVMfD1Rwg16AZyYw==}
+    dependencies:
+      tslib: 2.3.0
+    dev: false

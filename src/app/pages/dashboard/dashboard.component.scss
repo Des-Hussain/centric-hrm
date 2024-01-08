@@ -1,0 +1,37 @@
+@import './../../utils/resources/template.scss';
+
+.main-con{
+
+    .title-text{
+        font-size: 36px;
+
+        font-weight: 700;
+        color: $dark;
+        margin-bottom: 20px;
+    }
+    .card-text{
+        font-size: 28px;
+        font-weight: 700;
+        color: $dark;
+    }
+    .after-mimic {
+        left: 0px;
+        top: 0px;
+        width: 8px;
+        height: 100%;
+        position: absolute;
+        border-radius: 8px 0px 0px 8px;
+        color: aqua;
+    }
+    .header-action-button{
+        border-radius: 50%;
+        display: flex;
+        padding: 10px;
+        align-items: center;
+        cursor: pointer;
+        .avatar-con{
+            width: 40px;
+            height: 40px;
+        }
+    }
+}
