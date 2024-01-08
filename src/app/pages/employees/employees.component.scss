@@ -1,0 +1,23 @@
+@import './../../utils/resources/template.scss';
+
+.main-con{
+
+
+    .title-text{
+        font-size: 36px;
+        font-weight: 700;
+    
+        margin-bottom: 20px;
+    }
+ .grid-container {
+    display: grid; /* Use CSS grid property */
+    // grid-template-columns: repeat(5, .05fr); /* Define the number of columns and their width */
+    gap: 20px; /* Add some spacing between grid items */
+    grid-template-columns: repeat(auto-fill, minmax(320px, .05fr)); // Adjust as needed
+
+    @media (max-width: 600px) {
+        grid-template-columns: repeat(auto-fill, minmax(100%, .05fr));
+    }
+}
+
+}

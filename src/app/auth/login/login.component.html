@@ -1,1 +1,28 @@
-<p>login works!</p>
+<section class="login-main-con">
+    <img class="main-background" src="./../../../assets/img/login_background.png" alt="Login Sides">
+    <div class="main-content">
+        <div  class="logo-con">
+            <img class="logo" src="./../../../assets/img/logo.svg" alt="Logo">
+        </div>
+        <div class="content-con">
+            <h6 class="main-heading font-bold justify-center text-4xl mb-5">LOGIN</h6>
+            <p class="flex justify-center text-gray mb-5">Sign in and start managing your candidates!</p>
+            <div class="form-container">
+                <app-textfield
+                [type]="'email'"
+                [placeholder]="'Email'"
+                [value]="'shaheer.ahmed@gmail.com'"
+                ></app-textfield>
+                <app-textfield
+                [type]="'password'"
+                [placeholder]="'Password'"
+                [value]="'12345678'"
+                ></app-textfield>
+                <div>
+                    <a [routerLink]="['/auth/forgot']">Forgot Password</a>
+                </div>
+                <button class="primary-button font-semibold">Login</button>
+            </div>
+        </div>
+    </div>
+</section>
