@@ -15,6 +15,7 @@ import { PoliciesComponent } from './policies/policies.component';
 import { AttendanceContainerComponent } from "../utils/widgets/attendance-container/attendance-container.component";
 import { EmployeeCardComponent } from './employees/employee-card/employee-card.component';
 import { EmployeeDetailsSidebarComponent } from "../utils/widgets/employee-details-sidebar/employee-details-sidebar.component";
+import { EmployeeSidebarCardComponent } from "../utils/widgets/employee-sidebar-card/employee-sidebar-card.component";
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { EmployeeDetailsSidebarComponent } from "../utils/widgets/employee-detai
         PagesRoutingModule,
         ComponentsModule,
         AttendanceContainerComponent,
-        EmployeeDetailsSidebarComponent
+        EmployeeDetailsSidebarComponent,
+        EmployeeSidebarCardComponent
     ]
 })
 export class PagesModule { }

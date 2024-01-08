@@ -33,6 +33,7 @@ module.exports = {
         "orange": "#EF6C35",
         "white": "#ffffff",
         "blue": "#429FFD",
+        "sky-blue": "#00CDFE",
       },
     },
     corePlugins: {

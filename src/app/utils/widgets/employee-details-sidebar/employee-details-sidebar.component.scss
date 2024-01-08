@@ -1,7 +1,27 @@
 @import './../../../../app/utils/resources/template.scss';
 
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); // Adjust as needed
+    z-index: 999; // Adjust as needed
+    @include transition(all, 0.3s, ease-in-out);
+  }
+  .side-button{
+    right: 35%;
+    top: calc(50% - 35px);
+    height: 70px;
+    width: 50px;
+    background-color: white;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    position: absolute;
+  }
 .side-section{
-    width: 315px;
+    width: 35%;
     height: auto;
     max-height: 100%;
     overflow: scroll;
@@ -27,13 +47,13 @@
                 position: absolute;
                 width: 100%;
                 height: 100%;
-                background-color: rgba(0,0,0,0.5);
-                opacity: 0;
+                background-color: rgba(0,0,0,0.9);
+                opacity: 9;
                 @include transition(all, 0.3s, ease-in-out);
             }
             &:hover{
                 .backdrop{
-                    opacity: 1;
+                    opacity: 9;
                 }
             }
             &:not(:last-child){
