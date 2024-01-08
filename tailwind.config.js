@@ -25,6 +25,7 @@ module.exports = {
         "md-shade": "#F2F4F6",
         "dark-shade": "#E7EBED",
         "gray": "#9BA5B7",
+        "gray-100": "#e8e9ec",
         "dark-green": "#0D4744",
         "green": "#08C299",
         "light-green": "#00CC66",

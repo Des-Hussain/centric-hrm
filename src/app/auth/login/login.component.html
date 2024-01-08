@@ -1,5 +1,5 @@
 <section class="login-main-con">
-    <img class="main-background" src="./../../../assets/img/login_background.png" alt="Login Sides">
+    
     <div class="main-content">
         <div  class="logo-con">
             <img class="logo" src="./../../../assets/img/logo.svg" alt="Logo">
@@ -21,7 +21,7 @@
                 <div>
                     <a [routerLink]="['/auth/forgot']">Forgot Password</a>
                 </div>
-                <button class="primary-button font-semibold">Login</button>
+                <button class="primary-button font-semibold" (click)="login()">Login</button>
             </div>
         </div>
     </div>

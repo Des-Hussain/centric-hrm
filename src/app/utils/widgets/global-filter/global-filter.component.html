@@ -1,0 +1,8 @@
+<div class="grid grid-cols-2 gap-4">
+    <div class="department-buttons-con grid grid-flow-col-dense gap-2">
+        <button class="text-xs px-1 py-3 rounded-md " [ngClass]="active == filter ? 'bg-primary text-white' : 'bg-[#9BA5B720] text-gray' " *ngFor="let filter of departmentFilter">{{filter}}</button>
+    </div>
+    <div class="filter-con">
+        <app-global-dropdown [options]="shipFilter"></app-global-dropdown>
+    </div>
+</div>

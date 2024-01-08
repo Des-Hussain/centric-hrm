@@ -1,13 +1,12 @@
 @import './../../utils/resources/template.scss';
 
 .sidebar{
-    width: 280px;
+    width: 220px;
     height: 100%;
     min-height: 100vh;
     background-color: $dark;
     .sidebar-logo-con{
-        padding: 15px 20px 30px ;
-        // border-bottom: 0px solid $background;
+        padding: 30px 20px 30px;
         img{
             height: 100%;
             width: 85%;
