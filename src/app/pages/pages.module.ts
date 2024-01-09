@@ -16,6 +16,8 @@ import { AttendanceContainerComponent } from "../utils/widgets/attendance-contai
 import { EmployeeCardComponent } from './employees/employee-card/employee-card.component';
 import { EmployeeDetailsSidebarComponent } from "../utils/widgets/employee-details-sidebar/employee-details-sidebar.component";
 import { EmployeeSidebarCardComponent } from "../utils/widgets/employee-sidebar-card/employee-sidebar-card.component";
+import { CommonTitleColumnComponent } from "../utils/widgets/common-title-column/common-title-column.component";
+import { TableComponent } from "../utils/widgets/table/table.component";
 
 
 @NgModule({
@@ -37,7 +39,9 @@ import { EmployeeSidebarCardComponent } from "../utils/widgets/employee-sidebar-
         ComponentsModule,
         AttendanceContainerComponent,
         EmployeeDetailsSidebarComponent,
-        EmployeeSidebarCardComponent
+        EmployeeSidebarCardComponent,
+        CommonTitleColumnComponent,
+        TableComponent
     ]
 })
 export class PagesModule { }

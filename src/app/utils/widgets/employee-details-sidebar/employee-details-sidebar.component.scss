@@ -30,6 +30,7 @@
     &.open{
         @include transform(translateX(0));
     }
+    
 
     ::ng-deep{
         .certificate-img-con{

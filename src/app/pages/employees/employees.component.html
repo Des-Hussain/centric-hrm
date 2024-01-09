@@ -1,160 +1,200 @@
 <div class="main-con  text-black">
-    <div class="flex flex-row justify-between">
+  <div class="flex flex-row justify-between">
     <h2 class="title-text">Employees</h2>
-    <button  class="rounded-md text-white flex flex-row justify-between  p-3 w-40 h-10 background-primary" > 
-       
-        <img class="w-5 h-5 mr-1.5" src="./../../../assets/icons/plus.svg" alt="arrow_down">
-        <div class=" justify-center justify-self-center text-xs">Add New Employees</div>
-       </button> 
+    <button class="rounded-md text-white flex flex-row justify-between  p-3 w-40 h-10 background-primary">
+
+      <img class="w-5 h-5 mr-1.5" src="./../../../assets/icons/plus.svg" alt="arrow_down">
+      <div class=" justify-center justify-self-center text-xs">Add New Employees</div>
+    </button>
+  </div>
+
+  <div class="flex flex-wrap pb-3 ">
+    <div *ngFor="let item of attendanceContainer" class="mr-5">
+      <app-attendance-container [item]="item">
+
+      </app-attendance-container>
     </div>
-   
-        <div class="flex flex-wrap pb-3 ">
-          <div *ngFor="let item of attendanceContainer" class="mr-5">
-            <app-attendance-container [item]="item" >
+  </div>
 
-            </app-attendance-container>
-          </div>
-        </div>
 
-        
 
-        <app-employee-details-sidebar 
-        [showSideBar]="showSideBar"
-        (closeSideBar)="showSideBar = !showSideBar"
-        >
-     
-      <div class="flex flex-row justify-end my-7 ">
+  <app-employee-details-sidebar [showSideBar]="showSideBar" (closeSideBar)="showSideBar = !showSideBar">
+
+    <div class="flex flex-row justify-end my-7 ">
       <img class="w-6 h-6 mr-1.5" src="./../../../assets/icons/edit_pencil.svg" alt="edit">
       <img class="w-6 h-6 mr-1.5" src="./../../../assets/icons/send.svg" alt="send">
       <img class="w-6 h-6 mr-1.5" src="./../../../assets/icons/trash.svg" alt="trash">
     </div>
-    <app-employee-sidebar-card 
-    [employeeData]="data"
-    ></app-employee-sidebar-card>
-  <!-- TW Elements is free under AGPL, with commercial license required for specific uses. See more details: https://tw-elements.com/license/ and contact us for queries at tailwind@mdbootstrap.com --> 
-<!--Tabs navigation-->
-<ul
-class="mb-5 flex list-none flex-row flex-wrap border-b-0 pl-0"
-role="tablist"
-data-te-nav-ref>
-<li role="presentation">
-  <a
-    href="#tabs-home"
-    class="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[te-nav-active]:border-primary data-[te-nav-active]:text-primary dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400"
-    data-te-toggle="pill"
-    data-te-target="#tabs-home"
-    data-te-nav-active
-    role="tab"
-    aria-controls="tabs-home"
-    aria-selected="true"
-    >Home</a
-  >
-</li>
-<li role="presentation">
-  <a
-    href="#tabs-profile"
-    class="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[te-nav-active]:border-primary data-[te-nav-active]:text-primary dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400"
-    data-te-toggle="pill"
-    data-te-target="#tabs-profile"
-    role="tab"
-    aria-controls="tabs-profile"
-    aria-selected="false"
-    >Profile</a
-  >
-</li>
-<li role="presentation">
-  <a
-    
-    class="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[te-nav-active]:border-primary data-[te-nav-active]:text-primary dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400"
-    data-te-toggle="pill"
-    data-te-target="#tabs-messages"
-    role="tab"
-    aria-controls="tabs-messages"
-    aria-selected="false"
-    >Messages</a
-  >
-</li>
-<li role="presentation">
-  <a
-    
-    class="disabled pointer-events-none my-2 block border-x-0 border-b-2 border-t-0 border-transparent bg-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-400 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent dark:text-neutral-600"
-    data-te-toggle="pill"
-    data-te-target="#tabs-contact"
-    role="tab"
-    aria-controls="tabs-contact"
-    aria-selected="false"
-    >Contact</a
-  >
-</li>
-</ul>
+    <app-employee-sidebar-card [employeeData]="data" ></app-employee-sidebar-card>
 
-<!--Tabs content-->
-<div class="mb-6">
-<div
-  class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
-  id="tabs-home"
-  role="tabpanel"
-  aria-labelledby="tabs-home-tab"
-  data-te-tab-active>
-  Tab 1 content
-</div>
-<div
-  class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
-  id="tabs-profile"
-  role="tabpanel"
-  aria-labelledby="tabs-profile-tab">
-  Tab 2 content
-</div>
-<div
-  class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
-  id="tabs-messages"
-  role="tabpanel"
-  aria-labelledby="tabs-profile-tab">
-  Tab 3 content
-</div>
-<div
-  class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
-  id="tabs-contact"
-  role="tabpanel"
-  aria-labelledby="tabs-contact-tab">
-  Tab 4 content
-</div>
-</div>  
-  </app-employee-details-sidebar>
-    
-<div class="grid-container" >
-    <app-employee-card *ngFor="let item of employeeList"  [data]="item" (click)="onTap(item)"> </app-employee-card>
-
-</div>
-<button class="text-white " >
-    sdsd
-</button>
-
-<button data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown hover <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-    <!-- <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/> -->
-    </svg>
-    </button>
-    
-    <!-- Dropdown menu -->
-    <div  class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" >
-          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-          </li>
-          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
-          </li>
-          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
-          </li>
-          <li>
-            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
-          </li>
-        </ul>
+    <div class="flex flex-row px-7 ">
+      <div class="flex flex-row" *ngFor="let tab of tabs; let i = index">
+        <a (click)="onTabClick(i)"
+          class="my-2 block border-x-0 border-b-4 border-t-0 border-transparent
+        px-7 pb-3.5 pt-4 text-base font-bold  leading-tight
+        border-b-gray
+        hover:bg-neutral-100 focus:isolate focus:border-transparent
+        data-[te-nav-active]:border-primary data-[te-nav-active]:text-primary
+        dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400"
+          [class.border-primary]="activeTab === i" [class.text-primary]="activeTab === i" data-te-toggle="pill"
+          [attr.data-te-target]="'#tabs-' + tab.id" role="tab" [attr.aria-controls]="'tabs-' + tab.id"
+          [attr.aria-selected]="activeTab === i"
+          [style.border-color]="activeTab === i ? ' border-b-primary' : ' border-b-gray'">
+          {{ tab.name }}
+        </a>
+      </div>
     </div>
-    <button data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" class="rounded-md text-white flex flex-row justify-between  p-3 w-40 h-10 background-primary" > 
-       
-        <img class="w-5 h-5 mr-1.5" src="./../../../assets/icons/plus.svg" alt="arrow_down">
-        <div class=" justify-center justify-self-center text-xs">Add New Employees</div>
-       </button> 
+
+    <!--Tabs content-->
+    <!--Tabs content-->
+    <div class="px-7 pb-7">
+      <div *ngIf="activeTab == 0">
+        <div style="width: 100%; height: 100%;  background: #9BA5B710; border-radius: 10px " class="p-7 my-3">
+
+
+          <div class="text-dark text-lg font-bold mb-7" style="font-family: Maven Pro;">Personal Information</div>
+
+          <div class="flex flex-row  justify-between">
+
+            <div class="flex flex-col ">
+              <app-common-title-column [title]="'Full Name'"
+                [value]="employeePersonalDataModel.fullName"></app-common-title-column>
+              <app-common-title-column [title]="'Gender'"
+                [value]="employeePersonalDataModel.gender"></app-common-title-column>
+              <app-common-title-column [title]="'Martial Status'"
+                [value]="employeePersonalDataModel.martialStatus"></app-common-title-column>
+              <app-common-title-column [title]="'Address'"
+                [value]="employeePersonalDataModel.address"></app-common-title-column>
+            </div>
+            <div class="flex flex-col mr-8">
+              <app-common-title-column [title]="'Father Name'"
+                [value]="employeePersonalDataModel.fatherName"></app-common-title-column>
+              <app-common-title-column [title]="'Education'"
+                [value]="employeePersonalDataModel.education"></app-common-title-column>
+              <app-common-title-column [title]="'Contact'"
+                [value]="employeePersonalDataModel.contact"></app-common-title-column>
+              <app-common-title-column [title]="'Emergency Contact'"
+                [value]="employeePersonalDataModel.emergencyContact "></app-common-title-column>
+            </div>
+          </div>
+        </div>
+        <div style="width: 100%; height: 100%;  background: #9BA5B710; border-radius: 10px " class="p-7 my-5">
+
+
+          <div class="text-dark text-lg font-bold mb-7" style="font-family: Maven Pro;">Professional Information</div>
+
+          <div class="flex flex-row  justify-between">
+
+            <div class="flex flex-col ">
+              <app-common-title-column [title]="'Employee ID'"
+                [value]="employeePersonalDataModel.guid.toString()"></app-common-title-column>
+              <app-common-title-column [title]="'Employment Type'"
+                [value]="employeePersonalDataModel.employmentType"></app-common-title-column>
+              <app-common-title-column [title]="'Appointment Date'"
+                [value]="employeePersonalDataModel.appointmentDate"></app-common-title-column>
+              <app-common-title-column [title]="'Skills'"
+                [value]="employeePersonalDataModel.skills"></app-common-title-column>
+            </div>
+            <div class="flex flex-col mr-8">
+              <app-common-title-column [title]="'Job Title'"
+                [value]="employeePersonalDataModel.jobTitle"></app-common-title-column>
+              <app-common-title-column [title]="'Depqartment'"
+                [value]="employeePersonalDataModel.department"></app-common-title-column>
+              <app-common-title-column [title]="'Reporting'"
+                [value]="employeePersonalDataModel.reporting"></app-common-title-column>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div *ngIf="activeTab == 1">
+        <div style="width: 100%; height: 100%;  background: #9BA5B710; border-radius: 10px " class="p-7 my-5">
+
+
+          <div class="text-dark text-lg font-bold mb-7" style="font-family: Maven Pro;">Account Details</div>
+
+          <div class="flex flex-row  justify-between">
+            <app-common-title-column [title]="'Account Title'"
+              [value]="employeePersonalDataModel.fullName"></app-common-title-column>
+            <app-common-title-column [title]="'Acc no. / IBAN'" [value]="'99530107488791'"></app-common-title-column>
+            <app-common-title-column [title]="'Branch Name'"
+              [value]="'Meezan Bank-GULSHAN E HADEED KHI'"></app-common-title-column>
+          </div>
+          <div class=" my-3" style="height: 1px; background-color: #9BA5B7; opacity: 50%;"></div>
+
+<div
+class="flex flex-row justify-between mb-2">
+<div
+class="flex flex-row justify-between w-96 h-10 p-2"
+style="background: #9BA5B710; border-radius: 5px">
+<h1 class="text-black text-lg font-semibold" >
+  Previous Salary Generation
+</h1>
+<img src="./../../../assets/icons/calendar.svg" alt="calendar">
+</div>
+<div
+class="flex flex-row justify-between  bg-primary p-2 h-10 min-w-min rounded-md">
+<img src="./../../../assets/icons/export.svg"  alt="export">
+
+<h1 class="text-white text-base font-semibold " >
+  Export Data </h1>
+</div>
+</div>
+<div class="flex justify-end my-6">
+  <h1 class="common-text">Gross Salary: <strong>
+    {{salary}}
+  </strong>
+  </h1>
+</div>
+<app-table [columns]="tableHeading" [data]="tableData">
+
+</app-table>
+        </div>
+      </div>
+      <!-- //sdsdsssssssssssss -->
+      <div *ngIf="activeTab == 2">
+        Hello tab 3 </div>
+    </div>
+  </app-employee-details-sidebar>
+
+  <div class="grid-container">
+    <app-employee-card *ngFor="let item of employeeList" [data]="item" (click)="onTap(item)"> </app-employee-card>
+
+  </div>
+  <button class="text-white ">
+    sdsd
+  </button>
+
+  <button data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover"
+    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+    type="button">Dropdown hover <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+      fill="none" viewBox="0 0 10 6">
+      <!-- <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/> -->
+    </svg>
+  </button>
+
+  <!-- Dropdown menu -->
+  <div class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200">
+      <li>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+      </li>
+      <li>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+      </li>
+      <li>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+      </li>
+      <li>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
+      </li>
+    </ul>
+  </div>
+  <button data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover"
+    class="rounded-md text-white flex flex-row justify-between  p-3 w-40 h-10 background-primary">
+
+    <img class="w-5 h-5 mr-1.5" src="./../../../assets/icons/plus.svg" alt="arrow_down">
+    <div class=" justify-center justify-self-center text-xs">Add New Employees</div>
+  </button>
 </div>
