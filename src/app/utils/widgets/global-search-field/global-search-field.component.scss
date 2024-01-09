@@ -2,22 +2,21 @@
 
 .input-container{
     width: 100%;
-    margin-bottom: 20px;
     position: relative;
     .icon{
         position: absolute;
-        top: 16px;
-        left: 16px;
-        width: 16px;
+        top: 12px;
+        left: 14px;
+        width: 19px;
         height: 21px;
     }
     input{
         border: none;
         font-size: 16px;
         outline: none;
-        background-color: $gray-50;
+        background-color: $gray-100;
         border-radius: 10px;
-        padding: 15px 15px;
+        padding: 10px 15px;
         padding-left: 45px;
         box-shadow: none;
         &::placeholder{

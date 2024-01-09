@@ -16,6 +16,8 @@ import { AttendanceContainerComponent } from "../utils/widgets/attendance-contai
 import { EmployeeCardComponent } from './employees/employee-card/employee-card.component';
 import { EmployeeDetailsSidebarComponent } from "../utils/widgets/employee-details-sidebar/employee-details-sidebar.component";
 import { GlobalFilterComponent } from '../utils/widgets/global-filter/global-filter.component';
+import { TextfieldComponent } from '../utils/widgets/textfield/textfield.component';
+import { TableComponent } from '../utils/widgets/table/table.component';
 
 
 @NgModule({
@@ -37,7 +39,9 @@ import { GlobalFilterComponent } from '../utils/widgets/global-filter/global-fil
         ComponentsModule,
         AttendanceContainerComponent,
         EmployeeDetailsSidebarComponent,
-        GlobalFilterComponent
+        GlobalFilterComponent,
+        TableComponent,
+        TextfieldComponent
     ]
 })
 export class PagesModule { }

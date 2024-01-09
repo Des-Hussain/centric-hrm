@@ -1,8 +1,14 @@
 <div class="grid grid-cols-2 gap-4">
-    <div class="department-buttons-con grid grid-flow-col-dense gap-2">
-        <button class="text-xs px-1 py-3 rounded-md " [ngClass]="active == filter ? 'bg-primary text-white' : 'bg-[#9BA5B720] text-gray' " *ngFor="let filter of departmentFilter">{{filter}}</button>
+    <div class="department-buttons-con flex justify-start items-center gap-2">
+        <button class="text-xs px-3 py-3 rounded-md " [ngClass]="active == filter ? 'bg-primary text-white' : 'bg-[#9BA5B720] text-gray' " *ngFor="let filter of departmentFilter">{{filter}}</button>
     </div>
-    <div class="filter-con">
-        <app-global-dropdown [options]="shipFilter"></app-global-dropdown>
+    <div class="filter-con flex justify-end items-center">
+        <span class="text-gray mr-2">Shift: </span>
+        <div class="w-1/4 mr-2">
+            <app-global-dropdown [options]="shipFilter"></app-global-dropdown>
+        </div>
+        <div class="w-2/4">
+            <app-global-search-field [placeholder]="'Search here'" [icon]="'./../../assets/icons/search.svg'"></app-global-search-field>
+        </div>
     </div>
 </div>

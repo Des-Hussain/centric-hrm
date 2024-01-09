@@ -15,11 +15,12 @@ export class GlobalDropdownComponent {
 
   constructor(private elementRef: ElementRef) {}
   
-  selected: string = '';
+  selected: string = 'Option';
   open: boolean = false;
 
   onSelection(value: string){
     this.selected = value;
+    this.open = false;
     this.onSelect.emit(value);
   }
 

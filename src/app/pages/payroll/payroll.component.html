@@ -2,5 +2,8 @@
     <div class="flex flex-row justify-between">
         <h2 class="title-text">Payroll</h2>
     </div>
-    <app-global-filter></app-global-filter>
+    <div class="mb-2">
+        <app-global-filter></app-global-filter>
+    </div>
+    <app-table [data]="data" [columns]="columns"></app-table>
 </div>
